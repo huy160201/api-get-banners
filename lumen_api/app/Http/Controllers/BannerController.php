@@ -9,7 +9,7 @@ class BannerController extends Controller
     
     public function index()
     {
-        $banners = Banner::all();
+        $banners = Banner::paginate(2);
 
         return response()->json($banners);
     }
